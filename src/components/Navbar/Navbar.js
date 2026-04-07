@@ -43,11 +43,7 @@ const Navbar = () => {
           </a>
         </li>
         <li className="navbar-item">
-          <a
-            href="#collection"
-            className="navbar-link"
-            onClick={handleLinkClick}
-          >
+          <a href="#collection" className="navbar-link" onClick={handleLinkClick}>
             Collection
           </a>
         </li>

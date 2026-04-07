@@ -13,20 +13,14 @@ import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
 import { javascript } from '@codemirror/lang-javascript';
 import { json } from '@codemirror/lang-json';
-import { xml } from '@codemirror/lang-xml';
-import { angular } from '@codemirror/lang-angular';
-import { vue } from '@codemirror/lang-vue';
 
 import { sql } from '@codemirror/lang-sql';
 import { markdown } from '@codemirror/lang-markdown';
-import { yaml } from '@codemirror/lang-yaml';
-import { go } from '@codemirror/lang-go';
 import { php } from '@codemirror/lang-php';
 import { rust } from '@codemirror/lang-rust';
 
 // Theme
 // import { dracula } from "@uiw/codemirror-theme-dracula"; // old dracula theme
-// import { darcula } from "@uiw/codemirror-theme-darcula";
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import './CompilerPage.css';
 import Chatbot from '../../components/Chatbot/Chatbot'; // OpenAi Chatgpt integrate
@@ -41,15 +35,10 @@ const languageModes = {
   html: html(),
   css: css(),
   json: json(),
-  xml: xml(),
   sql: sql(),
   markdown: markdown(),
-  yaml: yaml(),
-  go: go(),
   php: php(),
   rust: rust(),
-  vue: vue(),
-  angular: angular(),
   r: python(),
   // SQL variants
   postgresql: sql(),
@@ -120,9 +109,7 @@ function CompilerPage() {
   const [output, setOutput] = useState('');
 
   const defaultExtension = languageExtensions[language?.toLowerCase()] || 'txt';
-  const [fileName, setFileName] = useState(
-    `${language}_code.${defaultExtension}`,
-  );
+  const [fileName, setFileName] = useState(`${language}_code.${defaultExtension}`);
   const languageMode = languageModes[language?.toLowerCase()] || cpp();
 
   const runCode = async () => {
@@ -229,11 +216,7 @@ function CompilerPage() {
 
           <div className="output-box">
             {/* <h3>Output</h3> */}
-            <textarea
-              value={output}
-              readOnly
-              placeholder="Output of your code..."
-            />
+            <textarea value={output} readOnly placeholder="Output of your code..." />
           </div>
         </div>
       </div>

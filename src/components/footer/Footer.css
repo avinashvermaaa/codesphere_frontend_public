@@ -32,7 +32,7 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   /* color: white; */
-  background: linear-gradient(90deg, #007bff, red);
+  background: linear-gradient(to right, red, white, #007bff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,7 +56,7 @@ body {
 
 .footer-list a:hover {
   /* color: white; footer texts on hover */
-  background: linear-gradient(90deg, #007bff, red);
+  background: linear-gradient(to right, red, white, #007bff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,7 +83,7 @@ body {
 
 .footer-bottom a:hover {
   /* color: #cfd8dc; */
-  background: linear-gradient(90deg, #007bff, red);
+  background: linear-gradient(to right, red, white, #007bff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Mq.css';
+import { MARQUEE_SECTIONS } from '../../configs/marqueeConfig';
 
 const Mq = ({ id }) => {
   return (
@@ -12,191 +13,35 @@ const Mq = ({ id }) => {
         </h2>
       </div>
 
-      {/* Animation Section 1: Web */}
-      <div id="moving-animation">
-        <div className="marque-wrapper">
-          <div className="marque-left">
-            {[
-              'html',
-              'css',
-              'javascript',
-              'reactjs',
-              'nodejs',
-              'expressjs',
-              'nextjs',
-              'typescript',
-              'angular',
-              'bootstrap',
-              'coffeescript',
-              'django',
-              'git',
-              'github',
-              'npm',
-              'redis',
-              'yarn',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/web/${imgName}.png`}
-                alt={imgName}
-                className="logo"
-              />
-            ))}
-          </div>
-          <div className="marque-left">
-            {[
-              'html',
-              'css',
-              'javascript',
-              'reactjs',
-              'nodejs',
-              'expressjs',
-              'nextjs',
-              'typescript',
-              'angular',
-              'bootstrap',
-              'coffeescript',
-              'django',
-              'git',
-              'github',
-              'npm',
-              'redis',
-              'yarn',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/web/${imgName}.png`}
-                alt={imgName}
-                className="logo"
-              />
-            ))}
+      {/* Dynamically render marquee sections */}
+      {MARQUEE_SECTIONS.map((section) => (
+        <div key={section.id} id={section.id}>
+          <div className={section.wrapperId}>
+            {/* First marquee copy */}
+            <div className={section.direction}>
+              {section.items.map((imgName, index) => (
+                <img
+                  key={`${imgName}-1-${index}`}
+                  src={`./img/${section.imagePath}/${imgName}.png`}
+                  alt={imgName}
+                  className={section.logoClass}
+                />
+              ))}
+            </div>
+            {/* Second marquee copy (for continuous loop) */}
+            <div className={section.direction}>
+              {section.items.map((imgName, index) => (
+                <img
+                  key={`${imgName}-2-${index}`}
+                  src={`./img/${section.imagePath}/${imgName}.png`}
+                  alt={imgName}
+                  className={section.logoClass}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Animation Section 2: DB & DevOps */}
-      <div id="moving-animation-db-devops">
-        <div className="marque-wrapper-db-devops">
-          <div className="marque-right">
-            {[
-              'aws',
-              'gcp',
-              'docker',
-              'kubernetes',
-              'mongodb',
-              'apache',
-              'cassandra',
-              'graphql',
-              'magento',
-              'mariadb',
-              'mysql',
-              'neo4j',
-              'oracle',
-              'postgresql',
-              'redis',
-              'sql',
-              'sqlserver',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/db/${imgName}.png`}
-                alt={imgName}
-                className="logo-db-devops"
-              />
-            ))}
-          </div>
-          <div className="marque-right">
-            {[
-              'aws',
-              'gcp',
-              'docker',
-              'kubernetes',
-              'mongodb',
-              'apache',
-              'cassandra',
-              'graphql',
-              'magento',
-              'mariadb',
-              'mysql',
-              'neo4j',
-              'oracle',
-              'postgresql',
-              'redis',
-              'sql',
-              'sqlserver',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/db/${imgName}.png`}
-                alt={imgName}
-                className="logo-db-devops"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Animation Section 3: Programming Languages */}
-      <div id="moving-animation">
-        <div className="marque-wrapper">
-          <div className="marque-left">
-            {[
-              'java',
-              'cpp',
-              'c',
-              'python',
-              'go',
-              'php',
-              'rust',
-              'swift',
-              'ruby',
-              'kotlin',
-              'javascript',
-              'perl',
-              'r',
-              'csharp',
-              'typescript',
-              'dart',
-              'go2',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/prog/${imgName}.png`}
-                alt={imgName}
-                className="logo"
-              />
-            ))}
-          </div>
-          <div className="marque-left">
-            {[
-              'java',
-              'cpp',
-              'c',
-              'python',
-              'go',
-              'php',
-              'rust',
-              'swift',
-              'ruby',
-              'kotlin',
-              'javascript',
-              'perl',
-              'r',
-              'csharp',
-              'typescript',
-              'dart',
-              'go2',
-            ].map((imgName, index) => (
-              <img
-                key={index}
-                src={`./img/prog/${imgName}.png`}
-                alt={imgName}
-                className="logo"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

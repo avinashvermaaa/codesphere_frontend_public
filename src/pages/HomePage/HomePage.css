@@ -26,7 +26,6 @@
 }
 
 .green {
-  /* color: #138808; */
   color: #7bf770;
 }
 .highlight-blue {
@@ -51,7 +50,6 @@
   -webkit-text-fill-color: transparent;
   animation: moveGradient 3s linear infinite;
   margin: 1rem 0;
-  margin: 1rem 0;
 }
 
 @keyframes moveGradient {
@@ -71,8 +69,6 @@
   font-size: 16px;
   width: 50%;
   border-radius: 16px;
-  /* border: 2px solid red; */
-  /* box-shadow: 0px 4px 8px red; */
   transition: all 0.1s ease-in-out;
   background-color: white;
   color: black;
@@ -90,7 +86,6 @@
 .category-button {
   padding: 10px 15px;
   font-size: 16px;
-  /* border: 2px solid linear-gradient(90deg, #007bff, red); */
   border-radius: 8px;
   cursor: pointer;
   background-color: #f8f9fa;
@@ -98,13 +93,11 @@
 }
 
 .category-button.active {
-  /* background: linear-gradient(90deg, #007bff, red); */
   color: white;
 }
 
 .category-button:hover {
   background: linear-gradient(90deg, #007bff, red);
-  color: white;
 }
 
 /* Category box styling */
@@ -112,17 +105,13 @@
   margin: 36px auto;
   padding: 20px;
   border-radius: 16px;
-  /* border: 4px solid #c0b0b9ff; */
   border: 4px solid #b6c4e3;
-  /* border-image: linear-gradient(45deg, #ff00d4, #007bff)0.5; */
   width: 62.2%;
   min-height: 300px;
   background-color: #f8f9fa;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  /* box-shadow: 0px 4px 12px red; */
   transition: all 0.1s ease-in-out;
   align-content: start;
   flex: 1;
@@ -132,7 +121,6 @@
 .language-item {
   padding: 12px;
   font-size: 18px;
-  /* border: 2px solid linear-gradient(90deg, #007bff, red); */
   border-radius: 11px;
   cursor: pointer;
   background-color: white;
@@ -142,7 +130,6 @@
 
 .language-item:hover {
   background: linear-gradient(90deg, #007bff, red);
-  color: white;
 }
 
 /* Root layout reset */
@@ -179,13 +166,6 @@ body.dark-mode .search-bar {
     inset -4px -4px 12px #1f1f1f;
 }
 
-body.dark-mode .search-bar::active {
-  background-color: black;
-  box-shadow:
-    inset 4px 4px 12px #000,
-    inset -4px -4px 12px #1f1f1f;
-}
-
 body.dark-mode .search-bar::placeholder {
   color: #bbb;
 }
@@ -208,13 +188,11 @@ body.dark-mode .category-button {
 }
 
 body.dark-mode .category-button:hover {
-  color: white;
   border-color: #333;
   background: linear-gradient(90deg, #007bff, red);
 }
 
 body.dark-mode .category-button.active {
-  color: white;
   box-shadow:
     inset 4px 4px 12px #000,
     inset -4px -4px 12px #1f1f1f;
@@ -228,11 +206,6 @@ body.dark-mode .language-item {
   box-shadow:
     inset 4px 4px 12px #000,
     inset -4px -4px 12px #1f1f1f;
-}
-
-body.dark-mode .language-item:hover {
-  /* color: #666; */
-  /* border-color: #333; */
 }
 
 body.dark-mode .language-item:active {
@@ -330,7 +303,6 @@ h2 {
 
 .banner {
   background-color: transparent;
-  /* padding: 20px; */
   text-align: center;
   color: white;
   font-family: Arial, sans-serif;
@@ -344,12 +316,10 @@ h2 {
 }
 
 .gradient {
-  background: linear-gradient(to right, #ff4b8e, #8e2de2, #00d4ff);
-  /* background: linear-gradient(to right, #FF9933, white, #138808); */
+  background: linear-gradient(to right, red, white, #007bff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* color: white; */
   display: inline;
 }
 

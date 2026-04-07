@@ -25,9 +25,7 @@ const Stats = () => {
           <p>Codes Compiled</p>
         </div>
         <div className="stat-box">
-          <span className="stat-number">
-            {inView && <CountUp end={69} duration={2} />}+
-          </span>
+          <span className="stat-number"> {inView && <CountUp end={69} duration={2} />}+ </span>
           <p>Languages</p>
         </div>
       </div>

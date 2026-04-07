@@ -128,15 +128,10 @@ const Footer = ({ id }) => {
         <div className="footer-grid">
           {/* Codesphere Section */}
           <div className="footer-column">
-            <h4
-              className="footer-title"
-              onClick={() => toggleSection('codesphere')}
-            >
+            <h4 className="footer-title" onClick={() => toggleSection('codesphere')}>
               CodeSphere {openSections.codesphere ? '▼' : '▶'}
             </h4>
-            <ul
-              className={`footer-list ${openSections.codesphere ? 'active' : ''}`}
-            >
+            <ul className={`footer-list ${openSections.codesphere ? 'active' : ''}`}>
               <li>
                 <a href="https://codespr.netlify.app">CodeSphere</a>
               </li>
@@ -169,15 +164,10 @@ const Footer = ({ id }) => {
 
           {/* Languages Section */}
           <div className="footer-column">
-            <h4
-              className="footer-title"
-              onClick={() => toggleSection('languages')}
-            >
+            <h4 className="footer-title" onClick={() => toggleSection('languages')}>
               Languages {openSections.languages ? '▼' : '▶'}
             </h4>
-            <ul
-              className={`footer-list two-column ${openSections.languages ? 'active' : ''}`}
-            >
+            <ul className={`footer-list two-column ${openSections.languages ? 'active' : ''}`}>
               {Languages.map((tool, idx) => (
                 <li key={idx}>
                   <Link to={`/compiler/${slugify(tool)}`}>{tool}</Link>
@@ -203,18 +193,11 @@ const Footer = ({ id }) => {
               </li>
             </ul>
 
-            <h4
-              className="footer-title"
-              onClick={() => toggleSection('cheatsheets')}
-            >
+            <h4 className="footer-title" onClick={() => toggleSection('cheatsheets')}>
               Cheatsheets {openSections.cheatsheets ? '▼' : '▶'}
             </h4>
-            <ul
-              className={`footer-list ${openSections.cheatsheets ? 'active' : ''}`}
-            >
-              <ul
-                className={`footer-list ${openSections.cheatsheets ? 'active' : ''}`}
-              ></ul>
+            <ul className={`footer-list ${openSections.cheatsheets ? 'active' : ''}`}>
+              <ul className={`footer-list ${openSections.cheatsheets ? 'active' : ''}`}></ul>ul
               <li>
                 <a href="https://codespr.netlify.app">Cheatsheets</a>
               </li>
@@ -232,8 +215,7 @@ const Footer = ({ id }) => {
         </div>
 
         <div className="footer-bottom">
-          © 2025 CodeSphere Pvt. Ltd. |
-          <a href="https://codespr.netlify.app">Privacy Policy</a> |{' '}
+          © 2025 CodeSphere Pvt. Ltd. |<a href="https://codespr.netlify.app">Privacy Policy</a> |{' '}
           <a href="https://codespr.netlify.app">Terms & Conditions</a>
         </div>
       </footer>
